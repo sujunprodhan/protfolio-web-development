@@ -26,4 +26,9 @@
   --color-error: oklch(62% 0.24 28);
 }
 
+
+  /* .icon{
+  @apply w-16 h-16 bg-opacity-25 text-gray-400 text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne hover:bg-opacity-40 hover:translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300
+} */
+
 @custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
