@@ -6,14 +6,14 @@ const Projects = () => {
   return (
     <section className="w-full py-20 ">
       <div>
-        <div>
-          <h1 className="text-xl flex justify-center items-center">
+        <div className='space-y-3'>
+          <h1 className="text-xl font-semibold text-[#FF014F] flex justify-center items-center">
             VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK
           </h1>
           <h2 className="text-5xl font-bold flex justify-center items-center">My Project</h2>
         </div>
         {/* Project Section */}
-        <section className="grid grid-cols-3 gap-5">
+        <section className="grid grid-cols-3 gap-5 mt-10">
           <ProjectCard
             image={<Image src="/projectOne.jpg" alt="projectone" width={700} height={200} />}
             title="Full-stack Project"
@@ -45,14 +45,7 @@ const Projects = () => {
 "
           />
           <ProjectCard
-            image={
-              <Image
-                src="/projectOne.jpg"
-                alt="projectone"
-                width={700}
-                height={200}
-              />
-            }
+            image={<Image src="/projectOne.jpg" alt="projectone" width={700} height={200} />}
             title="Firebase Auth"
             discretion="Firebase authentication system with email and social login, secure user management, role based access, real time updates, and scalable integration.
 "

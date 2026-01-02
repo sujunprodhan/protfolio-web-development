@@ -37,7 +37,7 @@ const Banner = () => {
               </div>
               <p className="text-gray-600 mt-5">
                 I use animation as a third dimension by which to simplify experiences and kuiding
-                thro each and every interaction. I'm not adding motion just to spruce things up, but
+                thro each and every interaction. Im not adding motion just to spruce things up, but
                 doing it in ways that.
               </p>
             </div>
