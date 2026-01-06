@@ -9,7 +9,7 @@ const FeatureSection = () => {
     <section className="w-full py-20 border-b border-b-gray-400 mt-25 ">
       <div>
         <h4 className="text-xl text-[#FF014F] font-semibold uppercase  tracking-wide">Features</h4>
-        <h2 className="text-5xl font-bold">What I Do</h2>
+        <h2 className="text-5xl font-bold text-white">What I Do</h2>
       </div>
       <div className="grid grid-cols-3 w-full gap-5 mt-10">
         <div>
