@@ -20,8 +20,8 @@ const Banner = () => {
   });
 
   return (
-    <section className="w-full min-h-screen py-10 flex justify-between ">
-      <div className="  grid grid-cols-1 md:grid-cols-2 items-center">
+    <section className="w-full min-h-screen py-10  ">
+      <div className="  flex flex-cols-1 md:flex-cols-2 justify-between items-center">
         {/* Left Content */}
         <div className="">
           <h4 className="text-gray-100 text-lg md:text-xl font-medium">WELCOME TO MY WORLD</h4>
@@ -101,14 +101,13 @@ const Banner = () => {
           className="flex justify-center items-center relative p-5"
         >
           <Image
-            src="/Sujun_Prodhan_Web_Developer.png"
-            alt="Sujun Prodhan - Frontend Developer"
+            src="/sujon.webp"
+            alt="sujon"
             width={500}
             height={500}
             priority
-            className="object-cover z-10 w-full max-w-xs sm:max-w-sm md:max-w-md"
+            className="object-cover z-10 w-full max-w-xs sm:max-w-sm md:max-w-md  rounded-br-[90px] rounded-bl-[120px]"
           />
-          <div className="absolute bottom-0 w-40 sm:w-60 md:w-80 h-40 sm:h-60 md:h-80 bg-gradient-to-r from-[#FF014F]/30 to-[#FF014F]/10 rounded-xl shadow-2xl"></div>
         </motion.div>
       </div>
     </section>
