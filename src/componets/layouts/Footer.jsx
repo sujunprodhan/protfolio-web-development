@@ -7,7 +7,12 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-[#22262A] text-white py-12 px-6 md:px-12 lg:px-20">
+    <footer
+      className="bg-white/5 backdrop-blur-xl
+  border border-white/10
+  shadow-[0_25px_60px_rgba(0,0,0,0.7)]
+  transition-all duration-500; text-white py-12 px-6 md:px-12 lg:px-20"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Brand Section */}
@@ -38,6 +43,12 @@ const Footer = () => {
               <Link
                 href="#projects"
                 className="hover:text-[#FF014F] transition-colors duration-300"
+              >
+                Projects
+              </Link>
+              <Link
+                href="#"
+                className="button"
               >
                 Projects
               </Link>

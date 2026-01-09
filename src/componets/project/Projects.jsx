@@ -13,7 +13,7 @@ const Projects = () => {
         <h2 className="text-5xl font-bold text-gray-100">My Project</h2>
       </div>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
+      <section className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
         <ProjectCard
           image={<Image src="/project1.webp" alt="project1" width={700} height={200} />}
           title="Full-stack Project"

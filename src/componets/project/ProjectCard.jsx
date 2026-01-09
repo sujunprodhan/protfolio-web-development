@@ -10,7 +10,7 @@ const ProjectCard = ({ title, discretion, image }) => {
       whileHover={{ y: -6, scale: 1.015 }}
       transition={{ duration: 0.35, ease: 'easeOut' }}
       className="relative w-full px-10 py-8 space-y-5 rounded-2xl
-        bg-gray-950 backdrop-blur-lg border border-white/15
+         card-3d
         shadow-[0_20px_40px_rgba(0,0,0,0.35)]
         hover:border-white/25 hover:shadow-[0_30px_60px_rgba(0,0,0,0.45)]
         transition-all duration-300
@@ -49,7 +49,7 @@ const ProjectCard = ({ title, discretion, image }) => {
       <p className="text-sm text-white/80 leading-relaxed">{discretion}</p>
 
       {/* SOFT HOVER GLOW */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-[#FF014F]/0 via-[#FF014F]/10 to-[#FF014F]/0 opacity-0 hover:opacity-100 transition pointer-events-none" />
+      <div className="absolute inset-0 rounded-2xl hover:opacity-100 transition pointer-events-none" />
     </motion.div>
   );
 };

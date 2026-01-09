@@ -11,7 +11,7 @@ const Education = () => {
             <p className="text-[#FF014F]">1998-2010</p>
             <h2 className="text-4xl text-gray-100 font-bold">Education </h2>
           </div>
-          <div className=" w-full border-l-5 border-l-black/50 text-white flex flex-col gap-10 ">
+          <div className=" w-full border-l-5 border-l-white/20 text-white flex flex-col gap-10 ">
             <div className="flex flex-col gap-5">
               <div>
                 <ResumeCard
@@ -46,7 +46,7 @@ const Education = () => {
             <p className="text-[#FF014F]">2024-2026</p>
             <h2 className="text-4xl text-gray-100 font-bold">Job Experience</h2>
           </div>
-          <div className=" w-full  border-l-5 border-l-black/50 text-white flex flex-col gap-10 ">
+          <div className=" w-full  border-l-5 border-l-white/20 text-white flex flex-col gap-10 ">
             <div className="flex flex-col gap-5">
               <div>
                 <ResumeCard

@@ -68,7 +68,12 @@ const Testimonial = () => {
           <SwiperSlide key={i}>
             <div className="min-h-120 w-full flex flex-col md:flex-row justify-between items-start md:items-center">
               {/* Left */}
-              <div className="w-full md:w-[30%] shadow-md bg-linear-to-r from-[#1F2125] to-[#1F2125] flex justify-center flex-col items-center p-5 mb-5 md:mb-0">
+              <div
+                className="w-full md:w-[30%] bg-white/5 backdrop-blur-xl
+  border border-white/10
+  shadow-[0_3px_10px_rgba(0,0,0,0.5)]
+  transition-all duration-500 rounded-md flex justify-center flex-col items-center p-5 mb-5 md:mb-0"
+              >
                 <Image
                   src={t.image}
                   alt="author"
@@ -77,13 +82,15 @@ const Testimonial = () => {
                   className="rounded-lg object-cover"
                 />
                 <h1 className="text-white text-2xl font-bold mt-4">{t.author}</h1>
-                <p className='text-white/50'>{t.position}</p>
+                <p className="text-white/50">{t.position}</p>
               </div>
 
               {/* Right */}
               <div className="w-full md:w-[65%] p-5">
                 <Image src="/quote.png" alt="quote" width={100} height={100} className="mb-4" />
-                <div className="bg-[#1F2125] rounded-md shadow-xl w-full text-center text-white/70 p-10">
+                <div
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_3px_10px_rgba(0,0,0,0.5)] transition-all duration-500; rounded-md w-full text-center text-white/70 p-10"
+                >
                   <h1 className="text-2xl font-bold">{t.service}</h1>
                   <p>{t.date}</p>
 
@@ -93,7 +100,7 @@ const Testimonial = () => {
                     ))}
                   </span>
 
-                  <p className="border-t-2 mt-7 border-black/70 pt-4">{t.quote}</p>
+                  <p className="border-t-2 mt-7 border-white/5 pt-4">{t.quote}</p>
                 </div>
               </div>
             </div>

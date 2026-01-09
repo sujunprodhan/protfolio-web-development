@@ -8,109 +8,110 @@ import { FaGithub } from 'react-icons/fa';
 import { SiNextdotjs } from 'react-icons/si';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 const Banner = () => {
   const [text] = useTypewriter({
-    words: ['Professional Coder', 'MERN Starck ', 'Full Starck Developer'],
+    words: ['Professional Coder', 'MERN Stack', 'Full Stack Developer'],
     loop: true,
     typeSpeed: 20,
     deleteSpeed: 10,
     delaySpeed: 2000,
   });
-  return (
-    <div>
-      <section className=" flex items-center px-5">
-        <div className=" min-h-screen w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 space-y-5 items-center mt-20">
-          {/* Left Content */}
-          <div>
-            <h4 className="mb-2 text-gray-100">WELCOME TO MY WORLD</h4>
-            <div className="flex flex-col">
-              <h1 className="text-4xl md:text-5xl text-gray-100 font-bold mb-4">
-                Hi, Im <span className="text-[#FF014F]">Sujon Prodhan</span>
-              </h1>
 
-              <div>
-                <h2 className="text-3xl md:text-3xl text-gray-100 font-semibold">
-                  a <span className=" text-gray-100 font-semibold">{text}</span>
-                  <Cursor cursorColor="#FF014F" />
-                </h2>
+  return (
+    <section className="w-full min-h-screen py-10 flex justify-between ">
+      <div className="  grid grid-cols-1 md:grid-cols-2 items-center">
+        {/* Left Content */}
+        <div className="">
+          <h4 className="text-gray-100 text-lg md:text-xl font-medium">WELCOME TO MY WORLD</h4>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl text-gray-100 font-bold">
+            Hi, I'm <span className="text-[#FF014F]">Sujon Prodhan</span>
+          </h1>
+          <h2 className="text-2xl sm:text-3xl md:text-3xl text-gray-100 font-semibold">
+            a <span>{text}</span>
+            <Cursor cursorColor="#FF014F" />
+          </h2>
+          <p className="text-gray-300 mt-3 md:mt-5 max-w-md">
+            I use animation as a third dimension to simplify experiences and guide users through
+            interactions. I don't just add motion to spruce things up, but to enhance usability
+            meaningfully.
+          </p>
+
+          {/* Social & Skills */}
+          <div className="flex flex-col w-full sm:flex-row sm:justify-between mt-6 gap-6 sm:gap-0">
+            {/* Social Links */}
+            <div className="space-y-2">
+              <h3 className="text-gray-100 font-semibold mb-2">Find Me</h3>
+              <div className="flex gap-3">
+                {[
+                  {
+                    href: 'https://www.facebook.com/sujon.prodhan.146',
+                    icon: <CiFacebook size={24} />,
+                  },
+                  {
+                    href: 'https://www.linkedin.com/in/sujun-prodhan-web-development/',
+                    icon: <FaLinkedinIn size={24} />,
+                  },
+                  {
+                    href: 'https://github.com/sujunprodhan',
+                    icon: <FaGithub size={24} />,
+                  },
+                ].map((item, index) => (
+                  <motion.a
+                    key={index}
+                    href={item.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    whileHover={{ y: -3 }}
+                    className="h-10 w-10 bg-gray-900/50 text-white rounded-md flex items-center justify-center shadow-lg hover:bg-opacity-40 transition-all duration-300"
+                  >
+                    {item.icon}
+                  </motion.a>
+                ))}
               </div>
-              <p className="text-gray-100 mt-5">
-                I use animation as a third dimension by which to simplify experiences and kuiding
-                thro each and every interaction. Im not adding motion just to spruce things up, but
-                doing it in ways that.
-              </p>
             </div>
 
-            <div>
-              <div className="flex justify-between mt-10">
-                <div>
-                  <h2 className="text-xl text-gray-100 mb-3">Find Me</h2>
-                  <div>
-                    <div className="flex gap-3 items-center">
-                      <Link href={'https://www.facebook.com/sujon.prodhan.146'}>
-                        <span className=" h-10 w-10 bg-gray-900/50 bg-opacity-25 text-gray-400 text-xl inline-flex items-center justify-center rounded-md shadow-xl hover:bg-opacity-40 hover:translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300">
-                          <CiFacebook size={24} className="hover:text-[#FF014F] text-white" />
-                        </span>
-                      </Link>
-                      <Link href={'https://www.linkedin.com/in/sujun-prodhan-web-development/'}>
-                        <span className=" h-10 w-10 bg-gray-900/50 bg-opacity-25 text-gray-400 text-xl inline-flex items-center justify-center rounded-md shadow-xl hover:bg-opacity-40 hover:translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300">
-                          <FaLinkedinIn size={24} className="hover:text-[#FF014F] text-white" />
-                        </span>
-                      </Link>
-                      <Link href={'https://github.com/sujunprodhan'}>
-                        <span className="h-10 w-10 bg-gray-900/50 bg-opacity-25 text-gray-400 text-xl inline-flex items-center justify-center rounded-md shadow-xl hover:bg-opacity-40 hover:translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300">
-                          <FaGithub size={24} className="hover:text-[#FF014F] text-white" />
-                        </span>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                {/* Skill Section */}
-                <div>
-                  <h2 className="text-xl text-gray-100 mb-3">Best Skill On</h2>
-                  {/* Skill Icon section */}
-                  <div className="flex gap-3">
-                    {/* React Icon */}
-                    <span className=" h-10 w-10 bg-gray-900/50 bg-opacity-25 text-gray-400 text-xl inline-flex items-center justify-center rounded-md shadow-xl hover:bg-opacity-40 hover:translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300">
-                      <FaReact size={24} className="hover:text-[#FF014F] text-white" />
-                    </span>
-                    {/* Next.js Icon */}
-                    <span className=" h-10 w-10 bg-gray-900/50 bg-opacity-25 text-gray-400 text-xl inline-flex items-center justify-center rounded-md shadow-xl hover:bg-opacity-40 hover:translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300">
-                      <SiNextdotjs size={24} className="hover:text-[#FF014F] text-white" />
-                    </span>
-                    {/* JavaScript Icon */}
-                    <span className=" h-10 w-10 bg-gray-900/50 bg-opacity-25 text-gray-400 text-xl inline-flex items-center justify-center rounded-md shadow-xl hover:bg-opacity-40 hover:translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300">
-                      <FaJava size={24} className="hover:text-[#FF014F] text-white" />
-                    </span>
-
-                    {/* Tailwind Icon */}
-                    <span className=" h-10 w-10 bg-gray-900/50 bg-opacity-25 text-gray-400 text-xl inline-flex items-center justify-center rounded-md shadow-xl hover:bg-opacity-40 hover:translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300">
-                      <RiTailwindCssFill size={24} className="hover:text-[#FF014F] text-white" />
-                    </span>
-                  </div>
-                </div>
+            {/* Skill Icons */}
+            <div className="space-y-2">
+              <h3 className="text-gray-100 font-semibold mb-2">Best Skill On</h3>
+              <div className="flex gap-3 flex-wrap">
+                {[
+                  <FaReact size={24} />,
+                  <SiNextdotjs size={24} />,
+                  <FaJava size={24} />,
+                  <RiTailwindCssFill size={24} />,
+                ].map((icon, idx) => (
+                  <motion.div
+                    key={idx}
+                    whileHover={{ y: -3 }}
+                    className="h-10 w-10 bg-gray-900/50 text-white rounded-md flex items-center justify-center shadow-lg cursor-pointer hover:bg-opacity-40 transition-all duration-300"
+                  >
+                    {icon}
+                  </motion.div>
+                ))}
               </div>
             </div>
           </div>
-
-          {/* Right Image */}
-          <section>
-            <div className="flex justify-center p-5 items-center relative ">
-              <Image
-                src="/Sujun_Prodhan_Web_Developer.png"
-                alt="Sujun Prodhan - Frontend Developer"
-                width={500}
-                height={500}
-                priority
-                className="object-cover z-10"
-              />
-              <div className="absolute bottom-0 w-100 h-125 bg-linear-to-r from-[#le2024] to-[#le2024] flex justify-center items-center rounded-md shadow-2xl"></div>
-            </div>
-          </section>
         </div>
-      </section>
-    </div>
+
+        {/* Right Image */}
+        <motion.div
+          whileHover={{ scale: 1.03 }}
+          className="flex justify-center items-center relative p-5"
+        >
+          <Image
+            src="/Sujun_Prodhan_Web_Developer.png"
+            alt="Sujun Prodhan - Frontend Developer"
+            width={500}
+            height={500}
+            priority
+            className="object-cover z-10 w-full max-w-xs sm:max-w-sm md:max-w-md"
+          />
+          <div className="absolute bottom-0 w-40 sm:w-60 md:w-80 h-40 sm:h-60 md:h-80 bg-gradient-to-r from-[#FF014F]/30 to-[#FF014F]/10 rounded-xl shadow-2xl"></div>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

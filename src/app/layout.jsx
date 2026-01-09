@@ -74,6 +74,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="py-2 md:w-11/12 mx-auto min-h-[calc(100vh-320px)]">{children}</main>
         <Footer />
+        
       </body>
     </html>
   );

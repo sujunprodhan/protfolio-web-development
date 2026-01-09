@@ -12,7 +12,7 @@ const ProfessionalSkill = () => {
         {/* 1st Section */}
 
         <div>
-          <div className=" w-full border-l-5 border-l-black/50 text-white flex flex-col gap-10 ">
+          <div className=" w-full border-l-5 border-l-white/20 text-white flex flex-col gap-10 ">
             <div className="flex flex-col gap-5">
               <div>
                 <ResumeCard
@@ -40,7 +40,7 @@ const ProfessionalSkill = () => {
         </div>
         {/* 2nd Section */}
         <div>
-          <div className=" w-full border-l-5 border-l-black/50 text-white flex flex-col gap-10 ">
+          <div className=" w-full border-l-5 border-l-white/20 text-white flex flex-col gap-10 ">
             <div className="flex flex-col gap-5">
               <div>
                 <ResumeCard
