@@ -19,27 +19,26 @@ const Resume = () => {
       </div>
       <div>
         <ul className="grid grid-cols-3 rounded-md">
-         
           <li
             onClick={() => setActiveTab('education')}
-            className={`w-full h-15 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center  rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950 ${
-              activeTab === 'education' ? 'bg-opacity-40 scale-102 bg-gray-950' : ''
+            className={`w-full h-15 bg-white/10 border focus:bg-amber-300 border-white/5  text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center  rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950/10 ${
+              activeTab === 'education' ? '  bg-amber-400' : 'bg-amber-400'
             }`}
           >
             Education
           </li>
           <li
             onClick={() => setActiveTab('professional')}
-            className={`w-full h-15 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center  rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950 ${
-              activeTab === 'professional' ? 'bg-opacity-40 scale-102 bg-gray-950' : ''
+            className={`w-full h-15 bg-white/10  text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-gray-300 duration-300 items-center  rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950 ${
+              activeTab === 'professional' ? ' scale-102 bg-amber-400' : ''
             }`}
           >
             Professional Skill
           </li>
           <li
             onClick={() => setActiveTab('experience')}
-            className={`w-full h-15 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950 ${
-              activeTab === 'experience' ? 'bg-opacity-40 scale-102 bg-gray-950' : ''
+            className={`w-full h-15 bg-white/10  text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950 ${
+              activeTab === 'experience' ? ' scale-102 bg-amber-400' : ''
             }`}
           >
             Experience
