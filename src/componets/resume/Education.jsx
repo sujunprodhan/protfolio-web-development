@@ -15,26 +15,26 @@ const Education = () => {
             <div className="flex flex-col gap-5">
               <div>
                 <ResumeCard
-                  title="BSc in Computer Science"
-                  short="SuperKing College (2001 - 2005)"
-                  result="3.53"
-                  dis="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
+                  title="Master of Computer Applications - MCA"
+                  short="Govt. Azizul Haque College (2012-2016)"
+                  result="2.93/4"
+                  dis="Higher education Coding Club / Programming Society – Participated in hackathons, coding competitions, and peer coding sessions."
                 />
               </div>
               <div>
                 <ResumeCard
-                  title="AS - Science & Information"
-                  short="SuperKing College (2001 - 2005)"
-                  result="3.53"
-                  dis="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
+                  title="Higher Secondary Education"
+                  short="Polasbary Govt College (2009 - 2011)"
+                  result="3.56/4"
+                  dis="Focused on advanced science subjects and computer fundamentals, preparing for undergraduate computer science studies."
                 />
               </div>
               <div>
                 <ResumeCard
                   title="Secondary School Education"
-                  short="SuperKing College (2001 - 2005)"
-                  result="3.53"
-                  dis="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
+                  short="Dholbhanga High School & College"
+                  result="4.29/5"
+                  dis="Completed foundational courses in science and mathematics, building a strong base for higher studies."
                 />
               </div>
             </div>
@@ -50,26 +50,26 @@ const Education = () => {
             <div className="flex flex-col gap-5">
               <div>
                 <ResumeCard
-                  title="BSc in Computer Science"
-                  short="SuperKing College (2001 - 2005)"
-                  result="3.53"
-                  dis="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
+                  title="BrightTech Solutions"
+                  short="Feb 2022 - Mar 2024"
+                  result="Full time"
+                  dis="Developed responsive websites, implemented modern frontend and backend frameworks, and optimized performance for client projects."
                 />
               </div>
               <div>
                 <ResumeCard
-                  title="AS - Science & Information"
-                  short="SuperKing College (2001 - 2005)"
-                  result="3.53"
-                  dis="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
+                  title="NexaSoft LLC"
+                  short="Full Stack Developer"
+                  result="Remote"
+                  dis="Built scalable web applications, integrated APIs, ensured cross-browser compatibility, and collaborated closely with design teams."
                 />
               </div>
               <div>
                 <ResumeCard
-                  title="Secondary School Education"
-                  short="SuperKing College (2001 - 2005)"
-                  result="3.53"
-                  dis="Higher education is tertiary education leading to award of an academic degree. Higher education, also called post-secondary education."
+                  title="CloudNova Inc."
+                  short="Apr 2024 - Present"
+                  result="Remote"
+                  dis="Leading web development projects, mentoring junior developers, and delivering high-quality, secure, and user-friendly applications."
                 />
               </div>
             </div>

@@ -19,8 +19,8 @@ const Banner = () => {
   });
   return (
     <div>
-      <section className=" flex items-center px-6">
-        <div className=" min-h-screen w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 space-y-5 items-center">
+      <section className=" flex items-center px-5">
+        <div className=" min-h-screen w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 space-y-5 items-center mt-20">
           {/* Left Content */}
           <div>
             <h4 className="mb-2 text-gray-100">WELCOME TO MY WORLD</h4>
@@ -47,7 +47,7 @@ const Banner = () => {
                 <div>
                   <h2 className="text-xl text-gray-100 mb-3">Find Me</h2>
                   <div>
-                    <div className="flex gap-5 items-center">
+                    <div className="flex gap-3 items-center">
                       <Link href={'https://www.facebook.com/sujon.prodhan.146'}>
                         <span className=" h-10 w-10 bg-gray-900/50 bg-opacity-25 text-gray-400 text-xl inline-flex items-center justify-center rounded-md shadow-xl hover:bg-opacity-40 hover:translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300">
                           <CiFacebook size={24} className="hover:text-[#FF014F] text-white" />
@@ -105,7 +105,7 @@ const Banner = () => {
                 priority
                 className="object-cover z-10"
               />
-              <div className="absolute bottom-0 w-125 h-125 bg-linear-to-r from-[#le2024] to-[#le2024] flex justify-center items-center rounded-md shadow-2xl"></div>
+              <div className="absolute bottom-0 w-100 h-125 bg-linear-to-r from-[#le2024] to-[#le2024] flex justify-center items-center rounded-md shadow-2xl"></div>
             </div>
           </section>
         </div>

@@ -8,20 +8,21 @@ import Experience from './Experience';
 const Resume = () => {
   const [activeTab, setActiveTab] = useState('education');
   return (
-    <div>
+    <div className="py-30">
       <div className="space-y-3">
         <h1 className="text-xl font-semibold text-[#FF014F] flex justify-center items-center">
           FULL STACK DEVELOPER
         </h1>
         <h2 className="text-5xl mb-10 text-gray-100 font-bold flex justify-center items-center">
-          My Resume
+          My Skills
         </h2>
       </div>
       <div>
-        <ul className="grid grid-cols-4 rounded-md">
+        <ul className="grid grid-cols-3 rounded-md">
+         
           <li
             onClick={() => setActiveTab('education')}
-            className={`w-full h-15 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-102 overflow-hidden hover:bg-black/30 ${
+            className={`w-full h-15 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center  rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950 ${
               activeTab === 'education' ? 'bg-opacity-40 scale-102 bg-gray-950' : ''
             }`}
           >
@@ -42,14 +43,6 @@ const Resume = () => {
             }`}
           >
             Experience
-          </li>
-          <li
-            onClick={() => setActiveTab('achievement')}
-            className={`w-full h-15 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center  rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950 ${
-              activeTab === 'achievement' ? 'bg-opacity-40 scale-102 bg-gray-950' : ''
-            }`}
-          >
-            Achievement
           </li>
         </ul>
         {/* Content based on active tab */}
