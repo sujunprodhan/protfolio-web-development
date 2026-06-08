@@ -2,8 +2,8 @@ import React from 'react';
 
 const FeatureCard = ({ title, short, icon, arrow }) => {
   return (
-    <section className=" w-full px-12 h-80 rounded-lg shadow-lg flex items-center bg-linear-to-r card-3d  group">
-      <div className="h-72 overflow-hidden">
+    <section className="w-full px-6 sm:px-8 md:px-12 min-h-[28rem] md:min-h-[24rem] lg:h-80 rounded-lg shadow-lg flex items-center bg-linear-to-r card-3d group">
+      <div className="h-full overflow-hidden">
         <div className="space-y-4 translate-y-20 h-72 group-hover:translate-y-0 transition-transform duration-600">
           <div className="text-2xl text-[#FF014F]">{icon}</div>
           <div className="text-white space-y-5 text-2xl font-bold">{title}</div>

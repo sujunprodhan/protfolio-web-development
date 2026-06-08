@@ -9,7 +9,7 @@ const ProjectCard = ({ title, discretion, image }) => {
     <motion.div
       whileHover={{ y: -6, scale: 1.015 }}
       transition={{ duration: 0.35, ease: 'easeOut' }}
-      className="relative w-full px-10 py-8 space-y-5 rounded-2xl
+      className="relative w-full px-6 sm:px-8 lg:px-10 py-8 space-y-5 rounded-2xl
          card-3d
         shadow-[0_20px_40px_rgba(0,0,0,0.35)]
         hover:border-white/25 hover:shadow-[0_30px_60px_rgba(0,0,0,0.45)]

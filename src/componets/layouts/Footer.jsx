@@ -8,12 +8,9 @@ import { motion } from 'framer-motion';
 const Footer = () => {
   return (
     <footer
-      className="bg-white/5 backdrop-blur-xl
-  border border-white/10
-  shadow-[0_25px_60px_rgba(0,0,0,0.7)]
-  transition-all duration-500; text-white py-12 px-6 md:px-12 lg:px-20"
+      className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.7)] transition-all duration-500 text-white py-12"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full px-5 sm:px-8 md:px-0 md:w-11/12 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-16">
           {/* Brand Section */}
           <div className="space-y-4">

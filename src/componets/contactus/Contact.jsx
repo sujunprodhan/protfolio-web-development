@@ -19,17 +19,17 @@ const Contact = () => {
   };
 
   return (
-    <section className="w-full min-h-screen py-20 text-white">
+    <section className="w-full min-h-screen py-20 px-5 sm:px-8 md:px-0 text-white">
       <p className="text-[#BF0A4D] text-center text-lg font-semibold uppercase tracking-wider">
         CONTACT
       </p>
       <h1 className="text-4xl md:text-5xl font-bold text-center mb-12">Contact With Me</h1>
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-10">
+      <div className="w-full flex flex-col md:flex-row justify-between gap-10">
         {/* Left Card */}
         <motion.div
           whileHover={{ y: -5 }}
-          className="w-full md:w-[35%] card-3d p-6 rounded-xl shadow-lg flex flex-col items-start space-y-4"
+          className="w-full md:w-[35%] h-fit card-3d p-6 rounded-xl shadow-lg flex flex-col items-start space-y-4"
         >
           <Image
             src="/contact-1.webp"
@@ -78,9 +78,9 @@ const Contact = () => {
         {/* Right Form */}
         <motion.div
           whileHover={{ y: -3 }}
-          className="w-full md:w-[63%] card-3d p-6 rounded-xl shadow-md"
+          className="w-full md:w-[63%] h-fit card-3d p-6 rounded-xl shadow-md"
         >
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 py-10">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-6 mt-4">
             <div className="flex flex-col md:flex-row gap-4">
               <div className="flex-1">
                 <input

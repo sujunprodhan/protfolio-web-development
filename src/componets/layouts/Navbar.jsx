@@ -53,9 +53,7 @@ const Navbar = () => {
           <NextLink
             href="/Resume of Sujon Prodhan.pdf"
             download
-            className="px-6 py-2 rounded-md border border-[#FF014F]
-                       text-[#FF014F] hover:bg-[#FF014F]
-                       hover:text-white transition-all duration-300"
+            className="px-6 py-2 rounded-md border border-[#FF014F] text-[#FF014F] hover:bg-[#FF014F] hover:text-white transition-all duration-300"
           >
             Download CV
           </NextLink>

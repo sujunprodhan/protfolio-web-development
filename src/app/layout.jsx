@@ -2,6 +2,7 @@ import { Montserrat } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/componets/layouts/Navbar';
 import Footer from '@/componets/layouts/Footer';
+import WhatsAppButton from '@/componets/layouts/WhatsAppButton';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -69,12 +70,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${montserrat.className} antialiased`}>
+    <html lang="en" className="overflow-x-hidden">
+      <body className={`${montserrat.className} antialiased overflow-x-hidden w-full max-w-[100vw]`}>
         <Navbar />
         <main className="py-2 md:w-11/12 mx-auto min-h-[calc(100vh-320px)]">{children}</main>
         <Footer />
-        
+        <WhatsAppButton />
       </body>
     </html>
   );

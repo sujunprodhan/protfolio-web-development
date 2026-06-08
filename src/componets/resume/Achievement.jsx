@@ -4,9 +4,9 @@ import ResumeCard from './ResumeCard';
 const Achievement = () => {
   return (
     <div>
-      <div className="flex gap-7">
+      <div className="flex flex-col lg:flex-row gap-10 lg:gap-7">
         {/* 1st Section */}
-        <div>
+        <div className="w-full lg:w-1/2">
           <div className="py-12">
             <p className="text-[#FF014F]">1998-2010</p>
             <h2 className="text-4xl text-gray-100 font-bold">Achievement </h2>
@@ -41,7 +41,7 @@ const Achievement = () => {
           </div>
         </div>
         {/* 2nd Section */}
-        <div>
+        <div className="w-full lg:w-1/2">
           <div className="py-12">
             <p className="text-[#FF014F]">2024-2026</p>
             <h2 className="text-4xl text-gray-100 font-bold">Job Experience</h2>

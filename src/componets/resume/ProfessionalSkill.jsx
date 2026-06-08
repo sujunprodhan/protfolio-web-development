@@ -8,7 +8,7 @@ const ProfessionalSkill = () => {
         <p className="text-[#FF014F]">2009-2016</p>
         <h2 className="text-4xl text-gray-100 font-bold">Professional Skill</h2>
       </div>
-      <div className="grid grid-cols-2 w-full gap-7">
+      <div className="grid grid-cols-1 lg:grid-cols-2 w-full gap-10 lg:gap-7">
         {/* 1st Section */}
 
         <div>

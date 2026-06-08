@@ -7,12 +7,12 @@ import { FaLaptopCode, FaLongArrowAltRight } from 'react-icons/fa';
 
 const FeatureSection = () => {
   return (
-    <section className="w-full py-20 border-b border-b-gray-400 mt-25 ">
+    <section className="w-full py-20 px-5 sm:px-8 md:px-0 border-b border-b-gray-400 mt-25">
       <div>
-        <h4 className="text-xl text-[#FF014F] font-semibold uppercase  tracking-wide">Features</h4>
+        <h4 className="text-xl text-[#FF014F] font-semibold uppercase tracking-wide">Features</h4>
         <h2 className="text-5xl font-bold text-white">What I Do</h2>
       </div>
-      <div className="grid grid-cols-3 w-full gap-5 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full gap-5 mt-10">
         <div>
           <FeatureCard
             title="Frontend Development"

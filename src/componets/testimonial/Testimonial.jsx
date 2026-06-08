@@ -45,7 +45,7 @@ const Testimonial = () => {
   ];
 
   return (
-    <section className="w-full py-30 border-b border-b-black">
+    <section className="w-full py-30 border-b border-b-black px-5 sm:px-8 md:px-0">
       <div className="text-center mb-10">
         <p className="text-[#FF014F]">CLIENT SAY</p>
         <h1 className="text-5xl font-bold text-white">Testimonial</h1>
@@ -88,9 +88,7 @@ const Testimonial = () => {
               {/* Right */}
               <div className="w-full md:w-[65%] p-5">
                 <Image src="/quote.png" alt="quote" width={100} height={100} className="mb-4" />
-                <div
-                  className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_3px_10px_rgba(0,0,0,0.5)] transition-all duration-500; rounded-md w-full text-center text-white/70 p-10"
-                >
+                <div className="bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_3px_10px_rgba(0,0,0,0.5)] transition-all duration-500 rounded-md w-full text-center text-white/70 p-10 mt-5 md:mt-0">
                   <h1 className="text-2xl font-bold">{t.service}</h1>
                   <p>{t.date}</p>
 

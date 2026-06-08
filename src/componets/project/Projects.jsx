@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Projects = () => {
   return (
-    <section className="w-full py-30">
+    <section className="w-full py-30 px-5 sm:px-8 md:px-0">
       <div className="space-y-3 text-center">
         <h1 className="text-xl font-semibold text-[#FF014F]">
           VISIT MY PORTFOLIO AND KEEP YOUR FEEDBACK

@@ -8,7 +8,7 @@ import Experience from './Experience';
 const Resume = () => {
   const [activeTab, setActiveTab] = useState('education');
   return (
-    <div className="py-30">
+    <div className="py-30 px-5 sm:px-8 md:px-0">
       <div className="space-y-3">
         <h1 className="text-xl font-semibold text-[#FF014F] flex justify-center items-center">
           FULL STACK DEVELOPER
@@ -18,27 +18,27 @@ const Resume = () => {
         </h2>
       </div>
       <div>
-        <ul className="grid grid-cols-3 rounded-md">
+        <ul className="grid grid-cols-1 md:grid-cols-3 rounded-md overflow-hidden">
           <li
             onClick={() => setActiveTab('education')}
-            className={`w-full h-15 bg-white/10 border focus:bg-amber-300 border-white/5  text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center  rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950/10 ${
-              activeTab === 'education' ? '  bg-amber-400' : 'bg-amber-400'
+            className={`w-full h-15 bg-white/10 border focus:bg-amber-300 border-white/5 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-102 hover:bg-gray-950/10 ${
+              activeTab === 'education' ? 'bg-amber-400 text-gray-900 font-bold' : ''
             }`}
           >
             Education
           </li>
           <li
             onClick={() => setActiveTab('professional')}
-            className={`w-full h-15 bg-white/10  text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-gray-300 duration-300 items-center  rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950 ${
-              activeTab === 'professional' ? ' scale-102 bg-amber-400' : ''
+            className={`w-full h-15 bg-white/10 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-102 hover:bg-gray-950/10 ${
+              activeTab === 'professional' ? 'bg-amber-400 text-gray-900 font-bold' : ''
             }`}
           >
             Professional Skill
           </li>
           <li
             onClick={() => setActiveTab('experience')}
-            className={`w-full h-15 bg-white/10  text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-102 overflow-hidden hover:bg-gray-950 ${
-              activeTab === 'experience' ? ' scale-102 bg-amber-400' : ''
+            className={`w-full h-15 bg-white/10 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-102 hover:bg-gray-950/10 ${
+              activeTab === 'experience' ? 'bg-amber-400 text-gray-900 font-bold' : ''
             }`}
           >
             Experience
