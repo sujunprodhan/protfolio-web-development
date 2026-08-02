@@ -71,9 +71,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="overflow-x-hidden">
-      <body className={`${montserrat.className} antialiased overflow-x-hidden w-full max-w-[100vw]`}>
+      <body
+        className={`${montserrat.className} antialiased overflow-x-hidden w-full max-w-[100vw]`}
+      >
         <Navbar />
-        <main className="py-2 md:w-11/12 mx-auto min-h-[calc(100vh-320px)]">{children}</main>
+        <main className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-2 min-h-[calc(100vh-320px)]">
+          {children}
+        </main>
         <Footer />
         <WhatsAppButton />
       </body>

@@ -18,27 +18,27 @@ const Resume = () => {
         </h2>
       </div>
       <div>
-        <ul className="grid grid-cols-1 md:grid-cols-3 rounded-md overflow-hidden">
+        <ul className="grid grid-cols-1 md:grid-cols-3 gap-2 rounded-md overflow-hidden">
           <li
             onClick={() => setActiveTab('education')}
-            className={`w-full h-15 bg-white/10 border focus:bg-amber-300 border-white/5 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-102 hover:bg-gray-950/10 ${
-              activeTab === 'education' ? 'bg-amber-400 text-gray-900 font-bold' : ''
+            className={`w-full min-h-56px py-4 bg-gray-900 focus:bg-amber-300  text-base sm:text-lg text-white flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-[1.02] hover:bg-gray-950/10 ${
+              activeTab === 'education' ? 'text-white bg-gray-900/50 font-bold' : ''
             }`}
           >
             Education
           </li>
           <li
             onClick={() => setActiveTab('professional')}
-            className={`w-full h-15 bg-white/10 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-102 hover:bg-gray-950/10 ${
-              activeTab === 'professional' ? 'bg-amber-400 text-gray-900 font-bold' : ''
+            className={`w-full min-h-56px py-4 bg-gray-900 text-base sm:text-lg text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-[1.02] hover:bg-gray-950/10 ${
+              activeTab === 'professional' ? 'text-white bg-gray-900/50 font-bold' : ''
             }`}
           >
             Professional Skill
           </li>
           <li
             onClick={() => setActiveTab('experience')}
-            className={`w-full h-15 bg-white/10 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-102 hover:bg-gray-950/10 ${
-              activeTab === 'experience' ? 'bg-amber-400 text-gray-900 font-bold' : ''
+            className={`w-full min-h-56px py-4 bg-gray-900 text-base sm:text-lg text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center rounded-none hover:scale-[1.02] hover:bg-gray-950/10 ${
+              activeTab === 'experience' ? 'text-white bg-gray-900/50 font-bold' : ''
             }`}
           >
             Experience

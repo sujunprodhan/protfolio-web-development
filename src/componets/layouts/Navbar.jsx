@@ -15,15 +15,21 @@ const navItems = [
 
 const Navbar = () => {
   const [active, setActive] = useState('home');
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleNavClick = (id) => {
+    setActive(id);
+    setIsOpen(false);
+  };
 
   return (
-    <header className="fixed top-0 w-full z-50 backdrop-blur">
-      <nav className="w-11/12 mx-auto py-5 flex items-center justify-between">
+    <header className="fixed top-0 w-full z-50 bg-slate-950/85 backdrop-blur-xl border-b border-white/10">
+      <nav className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-0 py-4 flex items-center justify-between">
         {/* Logo */}
         <Logo />
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex gap-2 items-center">
+        <ul className="hidden lg:flex gap-3 items-center">
           {navItems.map((item) => (
             <li key={item.id} className="relative group">
               <Link
@@ -60,28 +66,49 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <details className="lg:hidden">
-          <summary className="text-white text-2xl cursor-pointer">☰</summary>
-          <ul className="mt-3 p-4 bg-black/90 rounded-lg w-56 space-y-2">
-            {navItems.map((item) => (
-              <li key={item.id}>
-                <Link
-                  to={item.id}
-                  spy={true}
-                  smooth={true}
-                  duration={1200}
-                  offset={-200}
-                  onSetActive={() => setActive(item.id)}
-                  className="block px-4 py-2 rounded text-white hover:bg-[#FF014F]/30 cursor-pointer"
-                >
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-          
-        </details>
+        <button
+          type="button"
+          aria-expanded={isOpen}
+          aria-label="Toggle navigation menu"
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+        >
+          <span className="text-2xl">{isOpen ? '✕' : '☰'}</span>
+        </button>
       </nav>
+
+      {isOpen && (
+        <div className="lg:hidden w-full bg-slate-950/95 backdrop-blur-xl border-t border-white/10">
+          <div className="mx-auto w-11/12 py-4 space-y-2">
+            {navItems.map((item) => (
+              <Link
+                key={item.id}
+                to={item.id}
+                spy={true}
+                smooth={true}
+                duration={1000}
+                offset={-200}
+                onSetActive={() => setActive(item.id)}
+                onClick={() => handleNavClick(item.id)}
+                className={`block rounded-lg px-4 py-3 text-base font-medium transition ${
+                  active === item.id
+                    ? 'bg-[#FF014F]/20 text-white'
+                    : 'text-gray-300 hover:bg-[#FF014F]/20'
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+            <NextLink
+              href="/Resume of Sujon Prodhan.pdf"
+              download
+              className="block w-full text-center rounded-lg border border-[#FF014F] px-4 py-3 text-sm font-semibold text-[#FF014F] hover:bg-[#FF014F] hover:text-white transition"
+            >
+              Download CV
+            </NextLink>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

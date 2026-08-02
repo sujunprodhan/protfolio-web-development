@@ -4,7 +4,7 @@ import { FaGithub, FaGlobe } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
-const ProjectCard = ({ title, discretion, image }) => {
+const ProjectCard = ({ title, discretion, image, githubLink = "/", liveLink = "/" }) => {
   return (
     <motion.div
       whileHover={{ y: -6, scale: 1.015 }}
@@ -32,12 +32,12 @@ const ProjectCard = ({ title, discretion, image }) => {
       <div className="flex justify-between items-center">
         <h3 className="text-xl font-semibold text-[#FF014F] tracking-tight">{title}</h3>
         <div className="flex gap-2">
-          <Link href="/">
+          <Link href={githubLink}>
             <span className="w-8 h-8 rounded-full bg-gray-900 backdrop-blur-md flex items-center justify-center text-white hover:text-[#FF014F] transition">
               <FaGithub />
             </span>
           </Link>
-          <Link href="/">
+          <Link href={liveLink}>
             <span className="w-8 h-8 rounded-full bg-gray-900 backdrop-blur-md flex items-center justify-center text-white hover:text-[#FF014F] transition">
               <FaGlobe />
             </span>

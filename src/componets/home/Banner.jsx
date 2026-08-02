@@ -21,14 +21,25 @@ const Banner = () => {
 
   return (
     <section className="w-full min-h-screen py-20 flex items-center justify-center overflow-hidden">
+      <motion.div
+        animate={{
+          scale: [1, 1.1, 1],
+          opacity: [0.3, 0.6, 0.3],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: 'easeInOut',
+        }}
+        className="absolute top-1/2 right-2.5 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] bg-[#ff014d57] rounded-full blur-[80px] z-0"
+      ></motion.div>
       <div className="w-full px-5 sm:px-8 md:px-0 flex flex-col-reverse md:flex-row justify-between items-center gap-12 md:gap-8">
-        
         {/* Left Content */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-1/2 flex flex-col justify-center space-y-6 z-10"
+          className="w-full md:w-7/12 flex flex-col justify-center space-y-6 z-10"
         >
           <span className="text-[#FF014F] text-sm md:text-sm font-semibold tracking-[3px] uppercase drop-shadow-md">
             Welcome to my world
@@ -50,7 +61,9 @@ const Banner = () => {
           <div className="flex flex-col xl:flex-row justify-between mt-10 gap-8 xl:gap-0">
             {/* Social Links */}
             <div className="space-y-4">
-              <h3 className="text-gray-400 text-sm font-semibold tracking-wider uppercase">Find Me</h3>
+              <h3 className="text-gray-400 text-sm font-semibold tracking-wider uppercase">
+                Find Me
+              </h3>
               <div className="flex gap-4">
                 {[
                   {
@@ -72,7 +85,7 @@ const Banner = () => {
                     target="_blank"
                     rel="noreferrer"
                     whileHover={{ y: -5, color: '#FF014F' }}
-                    className="h-14 w-14 bg-[#202327] shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] text-gray-300 rounded-lg flex items-center justify-center hover:bg-[#1e2024] transition-all duration-300"
+                    className="h-14 w-14 bg-[#202327]  text-gray-300 rounded-lg flex items-center justify-center hover:bg-[#1e2024] transition-all duration-300"
                   >
                     {item.icon}
                   </motion.a>
@@ -82,7 +95,9 @@ const Banner = () => {
 
             {/* Skill Icons */}
             <div className="space-y-4">
-              <h3 className="text-gray-400 text-sm font-semibold tracking-wider uppercase">Best Skill On</h3>
+              <h3 className="text-gray-400 text-sm font-semibold tracking-wider uppercase">
+                Best Skill On
+              </h3>
               <div className="flex gap-4 flex-wrap">
                 {[
                   <FaReact size={22} />,
@@ -93,7 +108,7 @@ const Banner = () => {
                   <motion.div
                     key={idx}
                     whileHover={{ y: -5, color: '#FF014F' }}
-                    className="h-14 w-14 bg-[#202327] shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] text-gray-300 rounded-lg flex items-center justify-center cursor-pointer hover:bg-[#1e2024] transition-all duration-300"
+                    className="h-14 w-14 bg-[#202327] text-gray-300 rounded-lg flex items-center justify-center cursor-pointer hover:bg-[#1e2024] transition-all duration-300"
                   >
                     {icon}
                   </motion.div>
@@ -104,39 +119,27 @@ const Banner = () => {
         </motion.div>
 
         {/* Right Image */}
-        <div className="relative w-full md:w-1/2 flex justify-center items-center mt-10 md:mt-0 min-h-[400px]">
+        <div className="relative w-full md:w-5/12 max-w-[580px] mx-auto flex justify-center items-center mt-10 md:mt-0 min-h-[400px]">
           {/* Pulsing Glowing Circle Background */}
-          <motion.div
-            animate={{
-              scale: [1, 1.1, 1],
-              opacity: [0.3, 0.6, 0.3],
-            }}
-            transition={{
-              duration: 4,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] md:w-[450px] md:h-[450px] bg-[#FF014F] rounded-full blur-[80px] z-0"
-          ></motion.div>
 
           {/* Solid Pulse Outline Ring */}
           <motion.div
-             animate={{
+            animate={{
               scale: [1, 1.05, 1],
               opacity: [0.5, 0.8, 0.5],
             }}
             transition={{
               duration: 3,
               repeat: Infinity,
-              ease: "easeInOut",
+              ease: 'easeInOut',
             }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[420px] md:h-[420px] border border-[#FF014F]/40 rounded-full z-0"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-260px h-260px sm:w-320px sm:h-320px md:w-420px md:h-420px border border-[#FF014F]/40 rounded-full z-0"
           ></motion.div>
 
           {/* Floating Icons */}
           <motion.div
             animate={{ y: [-10, 10, -10] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute top-[10%] left-[5%] md:left-[10%] z-20 bg-[#202327] p-3 rounded-full shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] text-[#61DAFB]"
           >
             <FaReact size={35} />
@@ -144,7 +147,7 @@ const Banner = () => {
 
           <motion.div
             animate={{ y: [10, -10, 10] }}
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute top-[15%] right-[5%] md:right-[10%] z-20 bg-[#202327] p-3 rounded-full shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] text-white"
           >
             <SiNextdotjs size={35} />
@@ -152,7 +155,7 @@ const Banner = () => {
 
           <motion.div
             animate={{ y: [-15, 15, -15] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute bottom-[20%] left-[5%] md:left-[15%] z-20 bg-[#202327] p-3 rounded-full shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] text-[#F7DF1E]"
           >
             <SiJavascript size={35} />
@@ -160,7 +163,7 @@ const Banner = () => {
 
           <motion.div
             animate={{ y: [15, -15, 15] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
             className="absolute bottom-[10%] right-[5%] md:right-[15%] z-20 bg-[#202327] p-3 rounded-full shadow-[10px_10px_19px_#1c1e22,-10px_-10px_19px_#262a2e] text-[#47A248]"
           >
             <SiMongodb size={35} />
@@ -183,13 +186,12 @@ const Banner = () => {
                 className="object-contain w-full max-w-xs sm:max-w-sm md:max-w-md hover:scale-[1.02] transition-transform duration-500 ease-out drop-shadow-2xl"
                 style={{
                   WebkitMaskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
-                  maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)'
+                  maskImage: 'linear-gradient(to bottom, black 80%, transparent 100%)',
                 }}
               />
             </div>
           </motion.div>
         </div>
-
       </div>
     </section>
   );
